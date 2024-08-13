@@ -9,7 +9,7 @@ class InsertionSort{
             int[] arr = new int[size];
             for (int i = 0; i < size; i++) {
                 System.out.println("arr["+i+"]=");
-                arr[i] = sc.nextInt();
+                arr[i] = sc.nextInt(); 
             }
             for(int i = 0; i < size; i++){
                 int j = i;
