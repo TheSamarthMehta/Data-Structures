@@ -17,18 +17,44 @@ public class BST_Insert_Search_Delete {
 
     public Node insert(Node t, int data) {
 
+        /*  if (t == null) {
+             t = new Node(data);
+             return t;
+         }
+
+         Node newNode = new Node(data);
+         if (t.info > newNode.info) {
+             t.lpter = insert(t.lpter, data);
+         } else {
+             t.rpter = insert(t.rpter, data);
+         }
+         return t; */
+         
+        Node newNode = new Node(data);
         if (t == null) {
             t = new Node(data);
             return t;
         }
-
-        Node newNode = new Node(data);
-        if (t.info > newNode.info) {
-            t.lpter = insert(t.lpter, data);
-        } else {
-            t.rpter = insert(t.rpter, data);
+        Node current = t;
+        while (true) {
+            if (data < current.info) {
+                if (current.lpter == null) {
+                    current.lpter = newNode;
+                    break;
+                }else {
+                    current = current.lpter;
+                }
+            }else{
+                if (current.rpter == null) {
+                    current.rpter = newNode;
+                    break;
+                } else {
+                    current = current.rpter;
+                }
+            }
         }
         return t;
+        
     }
 
     public boolean search(Node t, int data) {
