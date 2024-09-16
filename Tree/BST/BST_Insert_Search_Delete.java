@@ -86,27 +86,27 @@ public class BST_Insert_Search_Delete {
     }
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-
-        System.out.println("Enter the number of elements: ");
-        int n = sc.nextInt();
-        BST_Insert_Search_Delete bst = new BST_Insert_Search_Delete();
-        int[] nodes = new int[n];
-        for (int i = 0; i < n; i++) {
-            System.out.println("nodes[" + i + "] = ");
-            nodes[i] = sc.nextInt();
-        }
-        for (int i = 0; i < n; i++) {
-            bst.t = bst.insert(bst.t, nodes[i]);
-        }
-        System.out.println(bst.t);
-        bst.RINORDER(bst.t);
-        System.out.println("Enter the number to serach:");
-        int k=sc.nextInt();
-        if(bst.search(bst.t, k)){
-            System.out.println("found");
-        }else{
-            System.out.println("Not found");
+        try (Scanner sc = new Scanner(System.in)) {
+            System.out.println("Enter the number of elements: ");
+            int n = sc.nextInt();
+            BST_Insert_Search_Delete bst = new BST_Insert_Search_Delete();
+            int[] nodes = new int[n];
+            for (int i = 0; i < n; i++) {
+                System.out.println("nodes[" + i + "] = ");
+                nodes[i] = sc.nextInt();
+            }
+            for (int i = 0; i < n; i++) {
+                bst.t = bst.insert(bst.t, nodes[i]);
+            }
+            System.out.println(bst.t);
+            bst.RINORDER(bst.t);
+            System.out.println("Enter the number to serach:");
+            int k=sc.nextInt();
+            if(bst.search(bst.t, k)){
+                System.out.println("found");
+            }else{
+                System.out.println("Not found");
+            }
         }
     }
 }

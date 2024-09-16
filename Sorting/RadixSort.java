@@ -27,7 +27,6 @@ class Radix_Sort {
         while(track<=count){
             int [] digits = new int[arr.length];
             for(int i=0;i<arr.length;i++){
-                int r=0;
                 int n=arr[i];
                 int flag=track;
                 while(flag>1 && n!=0){
