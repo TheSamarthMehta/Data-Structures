@@ -1,16 +1,12 @@
-
 import java.util.Scanner;
-
 class MyStack {
     int top = -1;
     int n;
     int[] arr;
-
     MyStack(int n) {
         this.n = n;
         arr = new int[n];
     }
-
     void push(int x) {
         if (top >= (n-1)) {
             System.out.println("Stack Overflow");
@@ -21,7 +17,6 @@ class MyStack {
         }
         return;
     }
-
     int pop() {
         if (top == -1) {
             return -1;
@@ -30,7 +25,6 @@ class MyStack {
             return arr[top+1];
         }
     }
-
     int peep(int i) {
         if ((top - i + 1) <=0 || i<=0) {
             return -1;
@@ -38,7 +32,6 @@ class MyStack {
             return arr[top - i + 1];
         }
     }
-
     void change(int i, int x) {
         if ((top - i + 1) <=0 || i<=0) {
             System.out.println("Invalid Index");
@@ -49,7 +42,6 @@ class MyStack {
             return;
         }
     }
-
     void display() {
         for (int i = top; i >= 0; i--) {
             System.out.println(arr[i] + " ");
@@ -57,7 +49,6 @@ class MyStack {
         return;
     }
 }
-
 public class StackStructure {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

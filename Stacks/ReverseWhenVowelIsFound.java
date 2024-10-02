@@ -4,12 +4,10 @@ class MyStack {
     int top = -1;
     int n;
     char[] arr;
-
     MyStack(int n) {
         this.n = n;
         arr = new char[n];
     }
-
     void push(char x) {
         if (top >= (n-1)) {
             System.out.println("MyStack Overflow");
@@ -20,18 +18,15 @@ class MyStack {
         }
         return;
     }
-
     char pop() {
         
             top = top - 1;
             return arr[top+1];
         
     }
-
     int size(){
         return top + 1;
     }
-
 }
 public class ReverseWhenVowelIsFound {
 	public static void main (String[] args)
@@ -64,4 +59,3 @@ public class ReverseWhenVowelIsFound {
         }
 	}
 }
-

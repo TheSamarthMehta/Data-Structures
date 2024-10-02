@@ -1,27 +1,23 @@
-
 import java.util.Scanner;
 import java.util.Stack;
 class MyStack {
     int top = -1;
     int n;
     char[] arr;
-
     MyStack(int n) {
         this.n = n;
         arr = new char[n];
     }
-
     void push(char x) {
         if (top >= (n-1)) {
             System.out.println("Stack Overflow");
         } else {
             top = top + 1;
             arr[top] = x;
-            // System.out.println("Element is pushed successfully");
+            System.out.println("Element is pushed successfully");
         }
         return;
     }
-
     char pop() {
         if (top == -1) {
             return 1;
@@ -36,7 +32,6 @@ class MyStack {
         }else{
             return 1;
         }
-       
     }
     boolean isEmpty() {
         if(top==-1) {
@@ -51,10 +46,8 @@ public class ValidParenthesis {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the set of parenthesis:");
         String p = sc.next();
-
-        Stack st= new Stack<>(p.length());
+        Stack st= new Stack()<>(p.length());
         int count=0;
-
         for(int i=0;i<p.length();i++){
             if(p.charAt(i)=='(' || p.charAt(i)=='{' || p.charAt(i)=='['){
                st.push(p.charAt(i));
@@ -64,14 +57,12 @@ public class ValidParenthesis {
                 }else{
                     st.pop();
                 }
-                
             }else if(p.charAt(i)==']' && !st.isEmpty()){
                 if(st.peek()!='['){
                     break;
                  }else{
                      st.pop();
                  }
-               
             }else if(p.charAt(i)=='}' && !st.isEmpty()){
                 if(st.peek()!='{'){
                     break;

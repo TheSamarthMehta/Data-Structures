@@ -1,16 +1,12 @@
-
 import java.util.Scanner;
-
 class MyStack {
     int top = -1;
     int n;
     char[] arr;
-
     MyStack(int n) {
         this.n = n;
         arr = new char[n];
     }
-
     void push(char x) {
         if (top >= (n - 1)) {
             System.out.println("Stack Overflow");
@@ -20,7 +16,6 @@ class MyStack {
         }
         return;
     }
-
     char pop() {
         if (top == -1) {
             return '$';
@@ -29,7 +24,6 @@ class MyStack {
             return arr[top + 1];
         }
     }
-
     char peek() {
         if (top == -1) {
             return '$';
@@ -37,14 +31,12 @@ class MyStack {
             return arr[top];
         }
     }
-
     void display() {
         for (int i = top; i >= 0; i--) {
             System.out.println(arr[i] + " ");
         }
         return;
     }
-
     String reverseString(String s) {
         String r = "";
         for (int i = s.length() - 1; i >= 0; i--) {
@@ -59,7 +51,6 @@ class MyStack {
         r += ')';
         return r;
     }
-
     String postFix(String s) {
         String r = reverseString(s);
         System.out.println(r);
@@ -109,7 +100,6 @@ class MyStack {
         }
         return reverseString(ans);
     }
-
     int precedence(char a) {
         if (a >= 'a' && a <= 'z') {
             return 7;
@@ -134,9 +124,7 @@ class MyStack {
         }
     }
 }
-
 public class InfixToPrefixShortcut {
-
     public static void main(String[] args) {
         try (Scanner sc = new Scanner(System.in)) {
             System.out.println("Enter the infix String:");
@@ -146,5 +134,4 @@ public class InfixToPrefixShortcut {
             System.out.println(st.postFix(s));
         }
     }
-
 }

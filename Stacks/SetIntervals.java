@@ -1,4 +1,3 @@
-
 // . Given a set of time intervals in any order, our task is to merge all overlapping 
 // intervals into one and output the result which should have only mutually 
 // exclusive intervals 
@@ -14,12 +13,10 @@ class MyStack {
     int top = -1;
     int n;
     int[][] arr;
-
     MyStack(int n) {
         this.n = n;
         arr = new int[n][2];
     }
-
     void push(int x , int y) {
         if (top >= (n-1)) {
             System.out.println("Stack Overflow");
@@ -31,7 +28,6 @@ class MyStack {
         }
         return;
     }
-
     int [] pop() {
         if (top == -1) {
             return new int[]{-1,-1};
@@ -40,7 +36,6 @@ class MyStack {
             return arr[top+1];
         }
     }
-
     void change(int i, int x , int y) {
         if ((top - i + 1) <=0 || i<=0) {
             System.out.println("Invalid Index");
@@ -52,14 +47,12 @@ class MyStack {
             return;
         }
     }
-
     void display() {
         for (int i = top; i >= 0; i--) {
             System.out.println(arr[i][0] + " " +arr[i][1]);
         }
         return;
     }
-
     int size(){
         return top + 1;
     }

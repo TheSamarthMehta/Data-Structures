@@ -1,6 +1,4 @@
-
 import java.util.Scanner;
-
 public class AShouldBeEqualToBInString {
     public static void main(String[] args) {
         try (Scanner sc = new Scanner(System.in)) {
