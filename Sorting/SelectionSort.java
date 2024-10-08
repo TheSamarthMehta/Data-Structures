@@ -12,8 +12,6 @@ public class SelectionSort{
                 System.out.println("arr["+i+"]=");
                 arr[i]=sc.nextInt();
             }
-            
-            
             int min_index;
             int min_Value;
             for(int i=0;i<(n);i++){
@@ -23,13 +21,10 @@ public class SelectionSort{
                         min_index=j;
             		}
             	}
-            	
             	min_Value=arr[min_index];
             	arr[min_index]=arr[i];
             	arr[i]=min_Value;
-            	
             }
-
             for(int i=0;i<n;i++){
                 System.out.println("arr["+i+"]="+arr[i]);
             }

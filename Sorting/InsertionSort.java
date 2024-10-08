@@ -25,6 +25,5 @@ class InsertionSort{
                 System.out.println("arr["+i+"]="+arr[i]);
             }
         }
-        
     }
 }
